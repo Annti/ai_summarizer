@@ -4,7 +4,6 @@ import summarizer
 
 app = FastAPI()
 
-
 class UrlRequest(BaseModel):
     url: HttpUrl
 
@@ -15,8 +14,6 @@ def summarize_article(payload: UrlRequest):
         summary = summarizer.summarize_with_gpt(text)
         return {"summary":summary}
     except ValueError as ve:
-
-        
         raise HTTPException(status_code=422, detail=str(ve))
     except Exception as e:
         print(e)
