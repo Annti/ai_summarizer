@@ -1,0 +1,16 @@
+# Ignoruj pliki środowiska
+venv/
+.env
+
+# Pliki edytora
+__pycache__/
+*.pyc
+*.pyo
+*.idea/
+*.vscode/
+
+# Logi i testy tymczasowe
+*.log
+coverage/
+*.coverage
+.pytest_cache/
